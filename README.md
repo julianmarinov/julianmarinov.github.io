@@ -3,7 +3,7 @@
 <!--
 **julianmarinov/julianmarinov** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some details about me:
+My name is Julian Marinov and here are some details about me:
 
 - 🔭 I’m currently working on my Git & GitHub skills
 - 🌱 I’m currently learning the basic workflow of GitHub and making some tests
