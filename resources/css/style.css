@@ -10,7 +10,7 @@
 }
   
 header {
-    background-color: #333333;
+    background-color: #000000;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -21,8 +21,9 @@ header {
   nav {
     margin: 0;
     padding: 20px 0;
-    text-align: right;
-    border: 1px solid #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
   }
 
   nav li {
@@ -38,12 +39,12 @@ header {
     color: #ffffff;
   }
 
-  .hero {    
-    background-image: url('https://unsplash.com/photos/turned-on-gray-laptop-computer-XJXWbfSo2f0');
+  .hero {   
+    margin-top: 100px; 
+    background-image: url('/resources/images/minimalist-programmer-code-coding-developer-apple-gradient-black-28-10-2024-1730177126-hd-wallpaper.png');
     background-size: cover;
     background-position: center;
     height: 600px;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -52,17 +53,17 @@ header {
     z-index: 0;
   }
 
-  main {
+main {
     text-align: center;
     position: relative;
     top: 20px;
   }
 
-  footer {
+footer {
     text-transform: uppercase;
     font-size: 11px;
     color: #ffffff;
-    background-color: #333333;
+    background-color: #000000;
     position: fixed;
     bottom: 0;
     width: 100%;
