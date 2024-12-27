@@ -6,45 +6,65 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
     <link href='resources/css/style.css' rel='stylesheet' type='text/css'/>
     <title>Julian Marinov - Junior Front-End Developer</title>
+    <!-- The following code uses JavaScript to include the header.html and the footer.html -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the header
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header").innerHTML = data)
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load the footer
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer").innerHTML = data)
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1 class="hero-heading">Junior Front-End Developer's Story</h1>
-            <p class="hero-text">
-            My name is Julian Marinov and I am a junior front-end developer with a passion for<br>
-            creating clean, responsive, and user-friendly websites.
-            </p>
-            <img src="resources/images/dev.png" alt="Front-End Developer Icon" width="100">
-    </div>
-    </header>
+    <div id="header"></div>
     <main>
-        <section class="about">
-            <h2 class="section-heading">About Me</h2>
-            <p class="section-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris vel tincidunt malesuada, 
-            velit turpis bibendum velit, ut tincidunt sapien velit vel sapien. Vestibulum ante ipsum primis in 
-            faucibus orci luctus et ultrices posuere cubilia curae; Donec euismod, mauris vel tincidunt malesuada, 
-            velit turpis bibendum velit, ut tincidunt sapien velit vel sapien. Vestibulum ante ipsum primis in 
-            faucibus orci luctus et ultrices posuere cubilia curae;
-            </p>
+        <section id="About-me" class="text-left">
+            <div class="section-text">
+                <h2 class="section-heading">About Me</h2>
+                <p class="section-text">
+                    I am a passionate and dedicated professional transitioning from an entrepreneurial career as a CEO and content creator into software development. With hands-on experience in Python programming, Django web development, and a strong foundation in coding principles, I am eager to apply my problem-solving skills and creative thinking to dynamic development teams. Currently seeking opportunities as a Python Developer, Django Developer, or Junior Developer to leverage my technical skills and enthusiasm for software engineering.
+                </p>
+            </div>
+            <div class="section-media">
+                <img alt="Test image" src="/resources/images/minimalist-programmer-code-coding-developer-apple-gradient-black-28-10-2024-1730177126-hd-wallpaper.png">
+            </div>
         </section>
-        <section class="portfolio"></section>
-        <section class="services"></section>
-        <section class="contact"></section>
+        <section id="Projects" class="text-right">
+            <div class="section-text">
+                <h2 class="section-heading">Projects</h2>
+                <p class="section-text">
+                    I've been working on dfferent projects that solve real problems and you can use them too!
+                    Most of them are very specific, but if they fit your needs, you will be amazed by the way they work!
+                </p>
+            </div>
+            <div class="section-media">
+                <img alt="Test image" src="/resources/images/minimalist-programmer-code-coding-developer-apple-gradient-black-28-10-2024-1730177126-hd-wallpaper.png">
+            </div>
+        </section>
+        <section id="Certifications" class="text-left">
+            <div class="section-text">
+                <h2 class="section-heading">Certifications</h2>
+                <p class="section-text">
+                    My technical skills are certified mostly by CodeCademy. You can see them in the "Certifications" page with a breaf explination of each course.
+                </p>
+            </div>
+            <div class="section-media">
+                <img alt="Test image" src="/resources/images/minimalist-programmer-code-coding-developer-apple-gradient-black-28-10-2024-1730177126-hd-wallpaper.png">
+            </div>
+        </section>
+        <section id="contact" class="text-right">
+
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Julian Marinov</p>
-    </footer>
+    <div id="footer"></div>
 </body>
 </html>
 
