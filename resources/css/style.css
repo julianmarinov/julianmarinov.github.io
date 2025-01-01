@@ -126,21 +126,61 @@ a:active {
 
 
 /* Button styles */
+
+.btn-light, .btn-dark {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    border: solid 1px;
+}
+
 .btn-light {
-  display: inline-block;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  background-color: #333;
-  color: #ffffff;
-  font-size: 16px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+    background-color: #ffffff;
+    border-color: #000000;
+    color: #000000;
 }
 
 .btn-light:hover {
-  background-color: #555;
+    background-color: #f7f7f7;
+    color: #000000;
+    font-weight: 300;
+    transition:
+            font-weight 0.3s ease-in-out,
+            background-color 0.3s ease-in-out,
+            color 0.3s ease-in-out;
+}
+
+.btn-light:active {
+    background-color: #e2e2e2;
+    color: #000000;
+}
+
+.btn-dark {
+    background-color: #000000;
+    border: #ffffff;
+    color: #ffffff;
+}
+
+.btn-dark:hover {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    font-weight: 300;
+    transition:
+            font-weight 0.3s ease-in-out,
+            background-color 0.3s ease-in-out,
+            color 0.3s ease-in-out;
+}
+
+.btn-dark:active {
+    background-color: #2d2d2d;
+    color: #ffffff;
 }
 
 /* Shared styles for reusable layout */
@@ -179,71 +219,6 @@ a:active {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-}
-
-.btn-light {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 10px 20px;
-  background-color: #ffffff;
-  border: solid 1px #000000;
-  font-weight: 300;
-  color: #000000;
-  border-radius: 10px;
-}
-
-.btn-light:hover {
-  background-color: #f7f7f7;
-  color: #000000;
-  font-weight: 300;
-  transition:
-    font-weight 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
-}
-
-.btn-light:active {
-  background-color: #e2e2e2;
-  color: #000000;
-}
-
-.btn-dark {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 10px 20px;
-  background-color: #000000;
-  border: solid 1px #ffffff;
-  font-weight: 300;
-  color: #ffffff;
-  border-radius: 10px;
-}
-
-.btn-dark {
-  display: inline-block;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  background-color: #000000;
-  color: #ffffff;
-  font-size: 16px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.btn-dark:hover {
-  background-color: #0b0b0b;
-  color: #ffffff;
-  font-weight: 300;
-  transition:
-    font-weight 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
-}
-
-.btn-dark:active {
-  background-color: #2d2d2d;
-  color: #ffffff;
 }
 
 /* Style Guide CSS */
