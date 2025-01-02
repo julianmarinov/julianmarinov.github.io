@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+    <link href='resources/css/style.css' rel='stylesheet' type='text/css'/>
+    <title>Julian Marinov - About Me</title>
+    <!-- The following code uses JavaScript to include the header and footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the header
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header").innerHTML = data)
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load the footer
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer").innerHTML = data)
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <h2>About Me</h2>
+        <p>My name is Julian and I am a software developer with a passion for creating beautiful and functional websites and applications. I have a bachelor's degree in Computer Science from the University of California, Berkeley and I have worked in various roles in the tech industry, including software engineering, product management, and technical support. I am currently looking for a new opportunity to further develop my skills and grow as a developer.</p>
+        <p>In my free time, I enjoy playing guitar, hiking, and exploring the outdoors. I also enjoy reading, watching movies, and playing video games.</p>
+    </main>
+    <div id="footer"></div>
+</body>
+</html>

@@ -1,12 +1,5 @@
 ## Hi there 👋
 
-<!--
-**julianmarinov/julianmarinov** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-My name is Julian Marinov and here are some details about me:
-
-- 🔭 I’m currently working on my Git & GitHub skills
-- 🌱 I’m currently learning the basic workflow of GitHub and making some tests
-- 👯 I’m looking to collaborate on different open source projects when I am ready to do so
-- 🤔 I’m looking for help with my first steps into the software developement using Python and Django
+My name is Julian Marinov and this repository is my personal portfolio website, which I created in order to practice HTML, CSS and JavaScript.
+I hope you enjoy my website and learn something new from it!
 

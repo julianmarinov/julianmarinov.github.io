@@ -44,6 +44,8 @@ header {
       color: #333;
   }
 
+
+
   .hero {   
     margin-top: 100px;
       margin-bottom: 100px;
@@ -67,8 +69,8 @@ main {
 footer {
     text-transform: uppercase;
     font-size: 11px;
-    color: #ffffff;
-    background-color: #000000;
+    color: #000000;
+    background-color: #ffffff;
     bottom: 0;
     width: 100%;
     text-align: center;
