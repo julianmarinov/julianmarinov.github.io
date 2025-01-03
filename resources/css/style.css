@@ -134,7 +134,7 @@ a {
 
 /* Button styles */
 
-.btn-light, .btn-dark {
+.btn-light, .btn-dark, .btn-download-certificate {
     display: inline-block;
     padding: 10px 20px;
     border-radius: 50px;
@@ -153,7 +153,7 @@ a {
     color: #000000;
 }
 
-.btn-light:hover {
+.btn-light:hover, .btn-download-certificate:hover {
     background-color: #f7f7f7;
     color: #000000;
     font-weight: 300;
@@ -163,7 +163,7 @@ a {
             color 0.3s ease-in-out;
 }
 
-.btn-light:active {
+.btn-light:active, .btn-download-certificate:active {
     background-color: #e2e2e2;
     color: #000000;
 }
@@ -189,8 +189,15 @@ a {
     color: #ffffff;
 }
 
+.btn-download-certificate {
+    background-color: #ffffff;
+    border-color: #000000;
+    color: #000000;
+    border-radius: 5px;
+}
+
 /* Shared styles for reusable layout */
-.text-left, .text-right, .text-mid {
+.text-left, .text-right, .text-mid, .certificate {
 
   gap: 20px;
   padding: 50px;
@@ -200,6 +207,9 @@ a {
 
 .text-left, .text-right {
     display: flex; /* Side-by-side layout */
+}
+
+.text-left, .text-right, .certificate {
     background-color: #f8f8f8;
 }
 
@@ -234,6 +244,13 @@ a {
   height: auto;
   border-radius: 10px;
 }
+
+.download-icon {
+    width: 25px;
+    height: auto;
+}
+
+
 
 /* Style Guide CSS */
 .style-guide-body {
