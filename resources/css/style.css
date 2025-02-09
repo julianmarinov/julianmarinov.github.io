@@ -1,3 +1,23 @@
+/*
+ * Website Stylesheet
+ *
+ * Description:
+ * This file contains the styles for the website, including layout, typography,
+ * and reusable design elements.
+ *
+ *      Table of Contents:
+ *      1. Reset & Initialization
+ *      2. Global Styles
+ *      3. Header
+ *      4. Navigation
+ *      5. Main Content
+ *      6. Footer
+ *      7. Typography & Text Styles
+ *      8. Button Styles
+ *      9. Utility & Reusable Layout Classes
+ */
+
+/* Reset & Initialization */
 *,
 *::before,
 *::after{
@@ -9,7 +29,7 @@
 	padding: 0;
     /* border: #ff0000 solid 1px; */
 }
-  
+/* Header styles */
 header {
     background-color: #ffffff;
     position: relative;
@@ -19,6 +39,7 @@ header {
     text-align: center;
   }
 
+/* Main navigation styles */
   nav {
     margin: 0;
     padding: 10px 0;
@@ -45,6 +66,17 @@ header {
       text-decoration: underline;
   }
 
+/* Footer styles */
+footer {
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #000000;
+    background-color: #ffffff;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 .social-icon {
     width: 20px;
     height: auto;
@@ -64,20 +96,11 @@ header {
     z-index: 0;
   }
 
+/* Main content styles */
 main {
     text-align: center;
     position: relative;
     margin-bottom: 80px;
-  }
-
-footer {
-    text-transform: uppercase;
-    font-size: 11px;
-    color: #000000;
-    background-color: #ffffff;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
   }
 
 body {    
@@ -131,6 +154,96 @@ p {
 a {
     color: #000000;
     text-decoration: underline;
+}
+
+/* Shared styles for reusable layout */
+.text-left, .text-right, .text-mid, .certificate {
+
+    gap: 20px;
+    padding: 50px;
+    margin: 50px 100px 50px 100px;
+    border-radius: 10px;
+}
+
+.text-left, .text-right {
+    display: flex; /* Side-by-side layout */
+}
+
+.text-left, .text-right, .certificate {
+    background-color: #f8f8f8;
+}
+
+.text-left .section-text {
+    order: 0; /* Keep text on the left */
+}
+
+.text-left .section-media {
+    order: 1; /* Media stays on the right */
+}
+
+.text-right .section-text {
+    order: 1; /* Move text to the right */
+
+}
+.text-right .section-media {
+    order: 0; /* Move media to the left */
+}
+
+.section-text p {
+    margin: 0 50px 30px;
+    align-self: center;
+}
+
+.section-text, .section-media {
+    flex: 1; /* Make both divs take equal width */
+    align-self: center;
+}
+
+.section-media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.download-icon {
+    width: 25px;
+    height: auto;
+}
+
+.certificate-title {
+    text-align: left;
+}
+.certificate-content, .certificate-includes {
+    text-align: left;
+    margin-top: -15px;
+}
+
+.certificate-includes {
+    margin-left: 30px;
+}
+
+.certificate-content {
+    margin-bottom: 30px;
+
+}
+
+.codecademy-logo {
+    width: 80px;
+    height: auto;
+}
+
+.certificate {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px 20px 50px;
+}
+.certificate-download {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 30px;
+    align-content: end;
+    padding-top: -50px;
+    padding-bottom: -20px;
 }
 
 /* Button styles */
@@ -197,133 +310,3 @@ a {
     border-radius: 5px;
 }
 
-/* Shared styles for reusable layout */
-.text-left, .text-right, .text-mid, .certificate {
-
-  gap: 20px;
-  padding: 50px;
-    margin: 50px 100px 50px 100px;
-    border-radius: 10px;
-}
-
-.text-left, .text-right {
-    display: flex; /* Side-by-side layout */
-}
-
-.text-left, .text-right, .certificate {
-    background-color: #f8f8f8;
-}
-
-.text-left .section-text {
-  order: 0; /* Keep text on the left */
-}
-
-.text-left .section-media {
-  order: 1; /* Media stays on the right */
-}
-
-.text-right .section-text {
-  order: 1; /* Move text to the right */
-
-}
-.text-right .section-media {
-  order: 0; /* Move media to the left */
-}
-
-.section-text p {
-  margin: 0 50px 30px;
-  align-self: center;
-}
-
-.section-text, .section-media {
-  flex: 1; /* Make both divs take equal width */
-    align-self: center;
-}
-
-.section-media img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.download-icon {
-    width: 25px;
-    height: auto;
-}
-
-.certificate-title {
-    text-align: left;
-}
-.certificate-content, .certificate-includes {
-    text-align: left;
-    margin-top: -15px;
-}
-
-.certificate-includes {
-    margin-left: 30px;
-}
-
-.certificate-content {
-    margin-bottom: 30px;
-
-}
-
-.codecademy-logo {
-    width: 80px;
-    height: auto;
-}
-
-.certificate {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 50px 20px 50px;
-}
-.certificate-download {
-    display: flex;
-    align-items: flex-end;
-    margin-top: 30px;
-    align-content: end;
-    padding-top: -50px;
-    padding-bottom: -20px;
-}
-
-/* Style Guide CSS */
-.style-guide-body {
-  padding: 10px 50px 10px 50px;
-}
-
-.style-guide-section {
-  border: #000000 solid 1px;
-  padding: 50px;
-  margin-bottom: 50px;
-}
-
-.color-swatch-light {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  border: #000000 solid 1px;
-  background-color: #ffffff;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  color: #000000;
-  display: flex;
-}
-
-.color-swatch-dark {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  border: #ffffff solid 1px;
-  background-color: #000000;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  color: #ffffff;
-  display: flex;
-}
