@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+    <link href='resources/css/style.css' rel='stylesheet' type='text/css'/>
+    <title>WebStorm Cheat Sheet for MacOS</title>
+    <!-- The following code uses JavaScript to include the header and footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the header
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header").innerHTML = data)
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load the footer
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer").innerHTML = data)
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+</head>
+<body>
+<div id="header"></div>
+
+<main>
+    <div class="hero">
+        <h1 class="hero-heading"
+            title="A front-end engineer —the term sometimes used interchangeably with “front-end developer” —builds websites, designs applications and ensures overall user accessibility.">
+            WebStorm Cheat Sheet for MacOS</h1>
+        <p class="hero-text">
+            WebStorm is a powerful IDE for front-end web development, built by JetBrains.
+            <br>
+            This cheat sheet provides a quick reference for the most common actions and shortcuts in WebStorm on MacOS.
+        </p>
+    </div>
+
+    <h2>Editing &amp; Code Manipulation</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Action</th>
+            <th>Shortcut (Mac)</th>
+            <th>Description / Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Comment/Uncomment Line</td>
+            <td><code>⌘ + /</code></td>
+            <td>Toggle a single-line comment on the current line</td>
+        </tr>
+        <tr>
+            <td>Block Comment/Uncomment</td>
+            <td><code>⌘ + Shift + /</code></td>
+            <td>Wrap (or unwrap) the selected code in a block comment</td>
+        </tr>
+        <tr>
+            <td>Duplicate Line/Selection</td>
+            <td><code>⌘ + D</code></td>
+            <td>Duplicate the current line or selected block</td>
+        </tr>
+        <tr>
+            <td>Delete Line</td>
+            <td><code>⌘ + Delete</code> (or <code>⌘ + Backspace</code>)</td>
+            <td>Delete the entire current line</td>
+        </tr>
+        <tr>
+            <td>Surround With...</td>
+            <td><code>⌘ + Alt + T</code></td>
+            <td>Wrap the selection in a code construct (e.g., if/try-catch)</td>
+        </tr>
+        <tr>
+            <td>Code Completion (Basic)</td>
+            <td><code>Control + Space</code></td>
+            <td>Invoke basic code completion suggestions</td>
+        </tr>
+        <tr>
+            <td>Code Completion (Smart)</td>
+            <td><code>Control + Shift + Space</code></td>
+            <td>Trigger context-aware (smart) completions</td>
+        </tr>
+        <tr>
+            <td>Reformat Code</td>
+            <td><code>⌘ + Alt + L</code></td>
+            <td>Auto-format code according to your style settings</td>
+        </tr>
+        <tr>
+            <td>Multiple Cursors / Carets</td>
+            <td><code>Option + Click</code></td>
+            <td>Add additional carets for simultaneous editing</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Navigation</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Action</th>
+            <th>Shortcut (Mac)</th>
+            <th>Description / Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Go to Declaration/Definition</td>
+            <td><code>⌘ + B</code> or <code>⌘ + Click</code></td>
+            <td>Jump to the declaration/definition of a symbol</td>
+        </tr>
+        <tr>
+            <td>Go to Implementation</td>
+            <td><code>⌘ + Alt + B</code></td>
+            <td>Navigate to a symbol’s implementation</td>
+        </tr>
+        <tr>
+            <td>Navigate Back / Forward</td>
+            <td><code>⌘ + [</code> / <code>⌘ + ]</code></td>
+            <td>Move backward or forward through your navigation history</td>
+        </tr>
+        <tr>
+            <td>Open File</td>
+            <td><code>⌘ + O</code></td>
+            <td>Open a file by name</td>
+        </tr>
+        <tr>
+            <td>Recent Files</td>
+            <td><code>⌘ + E</code></td>
+            <td>Show a list of recently opened files</td>
+        </tr>
+        <tr>
+            <td>Search Everywhere</td>
+            <td><code>Shift (double-tap)</code></td>
+            <td>Search for files, symbols, actions, and settings</td>
+        </tr>
+        <tr>
+            <td>Go to Symbol</td>
+            <td><code>⌘ + Alt + O</code></td>
+            <td>Quickly jump to any symbol in your project</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Refactoring</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Action</th>
+            <th>Shortcut (Mac)</th>
+            <th>Description / Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Rename</td>
+            <td><code>Shift + F6</code></td>
+            <td>Rename a symbol and update all its usages</td>
+        </tr>
+        <tr>
+            <td>Extract Variable</td>
+            <td><code>⌘ + Alt + V</code></td>
+            <td>Extract an expression into a new variable</td>
+        </tr>
+        <tr>
+            <td>Extract Method/Function</td>
+            <td><code>⌘ + Alt + M</code></td>
+            <td>Extract a block of code into its own method/function</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Search &amp; Replace</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Action</th>
+            <th>Shortcut (Mac)</th>
+            <th>Description / Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Find in File</td>
+            <td><code>⌘ + F</code></td>
+            <td>Open search within the current file</td>
+        </tr>
+        <tr>
+            <td>Replace in File</td>
+            <td><code>⌘ + R</code></td>
+            <td>Replace text in the current file</td>
+        </tr>
+        <tr>
+            <td>Find in Path (Project-wide)</td>
+            <td><code>⌘ + Shift + F</code></td>
+            <td>Search across the entire project</td>
+        </tr>
+        <tr>
+            <td>Replace in Path</td>
+            <td><code>⌘ + Shift + R</code></td>
+            <td>Replace text across all files in your project</td>
+        </tr>
+        <tr>
+            <td>Find Action</td>
+            <td><code>⌘ + Shift + A</code></td>
+            <td>Search for IDE actions, settings, or commands</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Code Generation &amp; Emmet</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Action</th>
+            <th>Shortcut (Mac)</th>
+            <th>Description / Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Emmet Expand Abbreviation</td>
+            <td><code>Type abbreviation + Tab</code></td>
+            <td>
+                Type an Emmet abbreviation (e.g., type <code>!</code> for HTML boilerplate) and press Tab to expand
+            </td>
+        </tr>
+        <tr>
+            <td>Generate Code</td>
+            <td><code>⌘ + N</code></td>
+            <td>Open the generate menu (useful for generating code snippets like constructors, etc.)</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Running &amp; Debugging</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Action</th>
+            <th>Shortcut (Mac)</th>
+            <th>Description / Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Run</td>
+            <td><code>Control + R</code></td>
+            <td>Run the current configuration (if set up)</td>
+        </tr>
+        <tr>
+            <td>Debug</td>
+            <td><code>Control + D</code></td>
+            <td>Start debugging the current configuration</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Miscellaneous</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Action</th>
+            <th>Shortcut (Mac)</th>
+            <th>Description / Notes</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Show Intention Actions (Quick Fix)</td>
+            <td><code>Alt + Enter</code></td>
+            <td>Display available quick fixes and intention actions</td>
+        </tr>
+        <tr>
+            <td>Quick Documentation Lookup</td>
+            <td><code>F1</code> (or <code>Fn + F1</code>)</td>
+            <td>View documentation for the symbol at the caret</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Tips</h2>
+    <ul>
+        <li>Emmet is built into WebStorm for HTML, CSS, and more. Just type an abbreviation (like <code>!</code>) and
+            press <code>Tab</code> to expand it.
+        </li>
+        <li>Use <code>⌘ + Shift + A</code> to search for any action by name—this is great if you forget a shortcut.</li>
+        <li>Many shortcuts are similar across JetBrains IDEs, so if you switch between them, your muscle memory will
+            soon adjust.
+        </li>
+    </ul>
+
+    <p>Happy coding!</p>
+</main>
+
+<div id="footer"></div>
+
+</body>
+</html>

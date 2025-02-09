@@ -20,15 +20,16 @@
 /* Reset & Initialization */
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: border-box;
 }
 
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
     /* border: #ff0000 solid 1px; */
 }
+
 /* Header styles */
 header {
     background-color: #ffffff;
@@ -37,34 +38,34 @@ header {
     z-index: 1;
     min-height: 30px;
     text-align: center;
-  }
+}
 
 /* Main navigation styles */
-  nav {
+nav {
     margin: 0;
     padding: 10px 0;
     display: flex;
     justify-content: flex-end;
     gap: 20px;
-  }
+}
 
-  nav li {
+nav li {
     display: inline-block;
     margin-right: 20px;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
-      font-weight: 400;
-  }
+    font-weight: 400;
+}
 
-  nav li a {
+nav li a {
     color: #000000;
-      text-decoration: none;
-  }
+    text-decoration: none;
+}
 
-  nav li a:hover {
-      color: #333;
-      text-decoration: underline;
-  }
+nav li a:hover {
+    color: #333;
+    text-decoration: underline;
+}
 
 /* Footer styles */
 footer {
@@ -82,28 +83,30 @@ footer {
     height: auto;
 }
 
-  .hero {   
+.hero {
+
+    justify-content: center;
+    align-items: center;
     margin-top: 100px;
-      margin-bottom: 100px;
+    margin-bottom: 100px;
     background-color: #ffffff;
     background-size: cover;
     background-position: center;
-    justify-content: center;
-    align-items: center;
+
     text-align: center;
     color: #000000;
     position: relative;
     z-index: 0;
-  }
+}
 
 /* Main content styles */
 main {
     text-align: center;
     position: relative;
     margin-bottom: 80px;
-  }
+}
 
-body {    
+body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -185,6 +188,7 @@ a {
     order: 1; /* Move text to the right */
 
 }
+
 .text-right .section-media {
     order: 0; /* Move media to the left */
 }
@@ -213,6 +217,7 @@ a {
 .certificate-title {
     text-align: left;
 }
+
 .certificate-content, .certificate-includes {
     text-align: left;
     margin-top: -15px;
@@ -237,6 +242,7 @@ a {
     justify-content: space-between;
     margin: 0 50px 20px 50px;
 }
+
 .certificate-download {
     display: flex;
     align-items: flex-end;
@@ -271,10 +277,9 @@ a {
     background-color: #f7f7f7;
     color: #000000;
     font-weight: 300;
-    transition:
-            font-weight 0.3s ease-in-out,
-            background-color 0.3s ease-in-out,
-            color 0.3s ease-in-out;
+    transition: font-weight 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 
 .btn-light:active, .btn-download-certificate:active {
@@ -292,10 +297,9 @@ a {
     background-color: #0b0b0b;
     color: #ffffff;
     font-weight: 300;
-    transition:
-            font-weight 0.3s ease-in-out,
-            background-color 0.3s ease-in-out,
-            color 0.3s ease-in-out;
+    transition: font-weight 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 
 .btn-dark:active {
@@ -310,3 +314,25 @@ a {
     border-radius: 5px;
 }
 
+/* Code styles */
+code {
+    background-color: #f1f1f1;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}

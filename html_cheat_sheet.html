@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+    <link href='resources/css/style.css' rel='stylesheet' type='text/css'/>
+    <title>HTML Cheat Sheet</title>
+    <!-- The following code uses JavaScript to include the header and footer -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load the header
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header").innerHTML = data)
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load the footer
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer").innerHTML = data)
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+</head>
+<body>
+<div id="header"></div>
+
+<main>
+    <div class="hero">
+        <h1 class="hero-heading"
+            title="A front-end engineer —the term sometimes used interchangeably with “front-end developer” —builds websites, designs applications and ensures overall user accessibility.">
+            HTML Cheat Sheet</h1>
+        <p class="hero-text">
+            HTML (Hypertext Markup Language) is the standard markup language for creating web pages and web
+            applications.
+            <br>
+            It defines the structure and presentation of content on the web pages. It is the core building block of the
+            web.
+        </p>
+    </div>
+
+<h2>1. Basic Document Structure</h2>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;!-- Additional metadata, links, or scripts go here --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Your page content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </code></pre>
+<p><strong>Description:</strong> This is the HTML5 boilerplate. The <code>&lt;!DOCTYPE html&gt;</code> declaration
+    triggers standards mode. The <code>&lt;meta&gt;</code> tags ensure proper character encoding and responsive
+    behavior.</p>
+
+<h2>2. Common HTML Elements</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Element</th>
+        <th>Syntax/Example</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Heading</td>
+        <td><code>&lt;h1&gt;Main Heading&lt;/h1&gt;</code></td>
+        <td>Use <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> for headings; <code>&lt;h1&gt;</code> is the highest
+            level.
+        </td>
+    </tr>
+    <tr>
+        <td>Paragraph</td>
+        <td><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></td>
+        <td>Represents a block of text.</td>
+    </tr>
+    <tr>
+        <td>Link</td>
+        <td><code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code></td>
+        <td>Creates a hyperlink to another resource.</td>
+    </tr>
+    <tr>
+        <td>Image</td>
+        <td><code>&lt;img src="image.jpg" alt="Description"&gt;</code></td>
+        <td>Embeds an image; always include an <code>alt</code> attribute.</td>
+    </tr>
+    <tr>
+        <td>Line Break</td>
+        <td><code>&lt;br&gt;</code></td>
+        <td>Inserts a line break.</td>
+    </tr>
+    <tr>
+        <td>Horizontal Rule</td>
+        <td><code>&lt;hr&gt;</code></td>
+        <td>Inserts a thematic break (a horizontal line).</td>
+    </tr>
+    <tr>
+        <td>Comment</td>
+        <td><code>&lt;!-- This is a comment --&gt;</code></td>
+        <td>Comments are not rendered by the browser.</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>3. Text Formatting &amp; Semantic Elements</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Element</th>
+        <th>Syntax/Example</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Bold (Strong)</td>
+        <td><code>&lt;strong&gt;Important&lt;/strong&gt;</code> or <code>&lt;b&gt;Bold Text&lt;/b&gt;</code></td>
+        <td><code>&lt;strong&gt;</code> indicates importance; <code>&lt;b&gt;</code> is for styling only.</td>
+    </tr>
+    <tr>
+        <td>Italic (Emphasis)</td>
+        <td><code>&lt;em&gt;Emphasized&lt;/em&gt;</code> or <code>&lt;i&gt;Italic Text&lt;/i&gt;</code></td>
+        <td><code>&lt;em&gt;</code> provides emphasis; <code>&lt;i&gt;</code> is typically used for stylistic changes.
+        </td>
+    </tr>
+    <tr>
+        <td>Underline</td>
+        <td><code>&lt;u&gt;Underlined Text&lt;/u&gt;</code></td>
+        <td>Underlines text (use sparingly as it may imply links).</td>
+    </tr>
+    <tr>
+        <td>Subscript / Superscript</td>
+        <td><code>&lt;sub&gt;subscript&lt;/sub&gt;</code> / <code>&lt;sup&gt;superscript&lt;/sup&gt;</code></td>
+        <td>Renders text as subscript or superscript.</td>
+    </tr>
+    <tr>
+        <td>Mark</td>
+        <td><code>&lt;mark&gt;Highlighted&lt;/mark&gt;</code></td>
+        <td>Highlights text (often used to denote search results).</td>
+    </tr>
+    <tr>
+        <td>Code</td>
+        <td><code>&lt;code&gt;inline code&lt;/code&gt;</code></td>
+        <td>Marks inline code snippets.</td>
+    </tr>
+    <tr>
+        <td>Preformatted</td>
+        <td><code>&lt;pre&gt;Preformatted text&lt;/pre&gt;</code></td>
+        <td>Preserves whitespace and line breaks (ideal for code blocks or poems).</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>4. Lists</h2>
+<table>
+    <thead>
+    <tr>
+        <th>List Type</th>
+        <th>Example</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Unordered List</td>
+        <td>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;Item One&lt;/li&gt;
+  &lt;li&gt;Item Two&lt;/li&gt;
+  &lt;li&gt;Item Three&lt;/li&gt;
+&lt;/ul&gt;
+        </code></pre>
+        </td>
+        <td>Creates a bullet-point list.</td>
+    </tr>
+    <tr>
+        <td>Ordered List</td>
+        <td>
+        <pre><code>&lt;ol&gt;
+  &lt;li&gt;First Item&lt;/li&gt;
+  &lt;li&gt;Second Item&lt;/li&gt;
+  &lt;li&gt;Third Item&lt;/li&gt;
+&lt;/ol&gt;
+        </code></pre>
+        </td>
+        <td>Creates a numbered list.</td>
+    </tr>
+    <tr>
+        <td>Description List</td>
+        <td>
+        <pre><code>&lt;dl&gt;
+  &lt;dt&gt;Term&lt;/dt&gt;
+  &lt;dd&gt;Description of the term.&lt;/dd&gt;
+&lt;/dl&gt;
+        </code></pre>
+        </td>
+        <td>Defines a description list (term-description pairs).</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>5. Tables</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Example</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+        <pre><code>&lt;table&gt;
+  &lt;caption&gt;Table Caption&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Header 1&lt;/th&gt;
+      &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Data 1&lt;/td&gt;
+      &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Footer 1&lt;/td&gt;
+      &lt;td&gt;Footer 2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+        </code></pre>
+        </td>
+        <td>Provides a full table structure with a caption, header, body, and footer.</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<h2>6. Forms &amp; Input Elements</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Element</th>
+        <th>Syntax/Example</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Form</td>
+        <td><code>&lt;form action="/submit" method="post"&gt; ... &lt;/form&gt;</code></td>
+        <td>Wraps form elements; <code>action</code> specifies where to send data; <code>method</code> defines the HTTP
+            method.
+        </td>
+    </tr>
+    <tr>
+        <td>Text Input</td>
+        <td><code>&lt;input type="text" name="username" placeholder="Enter username"&gt;</code></td>
+        <td>Single-line text input.</td>
+    </tr>
+    <tr>
+        <td>Password Input</td>
+        <td><code>&lt;input type="password" name="password"&gt;</code></td>
+        <td>Input field for passwords (characters are hidden).</td>
+    </tr>
+    <tr>
+        <td>Email Input</td>
+        <td><code>&lt;input type="email" name="email"&gt;</code></td>
+        <td>Input field with built-in email validation.</td>
+    </tr>
+    <tr>
+        <td>Submit Button</td>
+        <td>
+            <code>&lt;button type="submit"&gt;Submit&lt;/button&gt;</code> or
+            <code>&lt;input type="submit" value="Submit"&gt;</code>
+        </td>
+        <td>Triggers form submission.</td>
+    </tr>
+    <tr>
+        <td>Checkbox</td>
+        <td><code>&lt;input type="checkbox" name="subscribe" checked&gt;</code></td>
+        <td>Represents a binary choice; the <code>checked</code> attribute pre-selects the box.</td>
+    </tr>
+    <tr>
+        <td>Radio Button</td>
+        <td><code>&lt;input type="radio" name="gender" value="male"&gt; Male</code></td>
+        <td>Allows selection of one option from a set.</td>
+    </tr>
+    <tr>
+        <td>Select Dropdown</td>
+        <td>
+          <pre><code>&lt;select name="options"&gt;
+  &lt;option value="1"&gt;Option 1&lt;/option&gt;
+  &lt;option value="2"&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
+          </code></pre>
+        </td>
+        <td>Creates a dropdown list.</td>
+    </tr>
+    <tr>
+        <td>Textarea</td>
+        <td><code>&lt;textarea name="message" rows="4" cols="50"&gt;&lt;/textarea&gt;</code></td>
+        <td>Multi-line text input area.</td>
+    </tr>
+    <tr>
+        <td>Label</td>
+        <td><code>&lt;label for="username"&gt;Username:&lt;/label&gt; &lt;input id="username" type="text"
+            name="username"&gt;</code></td>
+        <td>Improves accessibility by associating text with form controls.</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>7. Media Elements</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Element</th>
+        <th>Syntax/Example</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Image</td>
+        <td><code>&lt;img src="image.jpg" alt="Description"&gt;</code></td>
+        <td>Embeds an image; include descriptive <code>alt</code> text.</td>
+    </tr>
+    <tr>
+        <td>Audio</td>
+        <td>
+          <pre><code>&lt;audio controls src="audio.mp3"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+          </code></pre>
+        </td>
+        <td>Embeds audio with built-in controls.</td>
+    </tr>
+    <tr>
+        <td>Video</td>
+        <td>
+          <pre><code>&lt;video controls width="320" height="240"&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+          </code></pre>
+        </td>
+        <td>Embeds video content; can include multiple sources.</td>
+    </tr>
+    <tr>
+        <td>Embed</td>
+        <td><code>&lt;embed src="file.pdf" width="500" height="375" type="application/pdf"&gt;</code></td>
+        <td>Embeds external content like PDFs or Flash content.</td>
+    </tr>
+    <tr>
+        <td>Object</td>
+        <td><code>&lt;object data="file.swf" type="application/x-shockwave-flash" width="400" height="300"&gt;&lt;/object&gt;</code>
+        </td>
+        <td>Embeds multimedia or interactive content.</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>8. Semantic Elements</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Element</th>
+        <th>Syntax/Example</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Header</td>
+        <td><code>&lt;header&gt; ... &lt;/header&gt;</code></td>
+        <td>Typically contains introductory content or navigation.</td>
+    </tr>
+    <tr>
+        <td>Nav</td>
+        <td><code>&lt;nav&gt; ... &lt;/nav&gt;</code></td>
+        <td>Contains site navigation links.</td>
+    </tr>
+    <tr>
+        <td>Main</td>
+        <td><code>&lt;main&gt; ... &lt;/main&gt;</code></td>
+        <td>Represents the primary content of the document.</td>
+    </tr>
+    <tr>
+        <td>Article</td>
+        <td><code>&lt;article&gt; ... &lt;/article&gt;</code></td>
+        <td>Encapsulates independent, self-contained content (e.g., a blog post).</td>
+    </tr>
+    <tr>
+        <td>Section</td>
+        <td><code>&lt;section&gt; ... &lt;/section&gt;</code></td>
+        <td>Groups related content thematically.</td>
+    </tr>
+    <tr>
+        <td>Aside</td>
+        <td><code>&lt;aside&gt; ... &lt;/aside&gt;</code></td>
+        <td>Contains tangentially related content (like sidebars).</td>
+    </tr>
+    <tr>
+        <td>Footer</td>
+        <td><code>&lt;footer&gt; ... &lt;/footer&gt;</code></td>
+        <td>Contains footer information for a document or section.</td>
+    </tr>
+    <tr>
+        <td>Figure &amp; Figcaption</td>
+        <td>
+          <pre><code>&lt;figure&gt;
+  &lt;img src="img.jpg" alt="Image Description"&gt;
+  &lt;figcaption&gt;Image caption&lt;/figcaption&gt;
+&lt;/figure&gt;
+          </code></pre>
+        </td>
+        <td>Groups media with its caption.</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>9. Meta Tags &amp; Linking Resources</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Element</th>
+        <th>Syntax/Example</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Meta Charset</td>
+        <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+        <td>Defines the character encoding.</td>
+    </tr>
+    <tr>
+        <td>Meta Viewport</td>
+        <td><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></td>
+        <td>Ensures proper scaling on mobile devices.</td>
+    </tr>
+    <tr>
+        <td>Meta Description</td>
+        <td><code>&lt;meta name="description" content="A brief description of the page"&gt;</code></td>
+        <td>Helps search engines understand the page content.</td>
+    </tr>
+    <tr>
+        <td>Link CSS</td>
+        <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+        <td>Links an external stylesheet.</td>
+    </tr>
+    <tr>
+        <td>Script</td>
+        <td><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></td>
+        <td>Links an external JavaScript file.</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>10. Scripting &amp; Data</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Element</th>
+        <th>Syntax/Example</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Inline Script</td>
+        <td><code>&lt;script&gt;console.log('Hello, world!');&lt;/script&gt;</code></td>
+        <td>Embeds JavaScript directly within the HTML.</td>
+    </tr>
+    <tr>
+        <td>Data Attributes</td>
+        <td><code>&lt;div data-user="JohnDoe"&gt;&lt;/div&gt;</code></td>
+        <td>Custom attributes (prefixed with <code>data-</code>) to store extra data.</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>11. Accessibility &amp; ARIA</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Attribute/Element</th>
+        <th>Syntax/Example</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>ARIA Role</td>
+        <td><code>&lt;div role="navigation"&gt; ... &lt;/div&gt;</code></td>
+        <td>Helps define the purpose of an element for assistive technologies.</td>
+    </tr>
+    <tr>
+        <td>ARIA Label</td>
+        <td><code>&lt;button aria-label="Close"&gt;X&lt;/button&gt;</code></td>
+        <td>Provides an accessible label where visible text is insufficient.</td>
+    </tr>
+    <tr>
+        <td>Tabindex</td>
+        <td><code>&lt;a href="#" tabindex="0"&gt;Focusable Link&lt;/a&gt;</code></td>
+        <td>Makes an element focusable via keyboard navigation.</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>12. Miscellaneous Elements</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Element</th>
+        <th>Syntax/Example</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Iframe</td>
+        <td><code>&lt;iframe src="https://example.com" title="Example Site" width="600"
+            height="400"&gt;&lt;/iframe&gt;</code></td>
+        <td>Embeds another HTML document within the current page.</td>
+    </tr>
+    <tr>
+        <td>Base</td>
+        <td><code>&lt;base href="https://example.com/"&gt;</code></td>
+        <td>Sets a base URL for all relative URLs in the document.</td>
+    </tr>
+    <tr>
+        <td>Noscript</td>
+        <td><code>&lt;noscript&gt;Your browser does not support JavaScript!&lt;/noscript&gt;</code></td>
+        <td>Provides fallback content for users with JavaScript disabled.</td>
+    </tr>
+    </tbody>
+</table>
+
+<p><em>This cheat sheet covers the core HTML elements and patterns you’ll use day-to-day. For more in-depth learning,
+    refer to the official <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs</a>
+    or other comprehensive resources.</em></p>
+
+<p>Happy coding!</p>
+</main>
+
+<div id="footer"></div>
+
+</body>
+</html>
