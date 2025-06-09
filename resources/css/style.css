@@ -87,8 +87,8 @@ footer {
 
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 70px;
+    margin-bottom: 70px;
     background-color: #ffffff;
     background-size: cover;
     background-position: center;
@@ -335,4 +335,18 @@ th, td {
 th {
     background-color: #f4f4f4;
     font-weight: bold;
+}
+
+/* Form styles */
+label {
+    display: block;
+}
+
+input, textarea {
+    border-radius: 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #f8f8f8;
+    padding: 10px;
+    margin: 5px;
 }
