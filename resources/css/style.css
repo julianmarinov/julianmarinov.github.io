@@ -160,7 +160,7 @@ a {
 }
 
 /* Shared styles for reusable layout */
-.text-left, .text-right, .text-mid, .certificate {
+.text-left, .text-right, .text-mid, .certificate, .update-section {
 
     gap: 20px;
     padding: 50px;
@@ -172,7 +172,7 @@ a {
     display: flex; /* Side-by-side layout */
 }
 
-.text-left, .text-right, .certificate {
+.text-left, .text-right, .certificate, .update-section {
     background-color: #f8f8f8;
 }
 
@@ -338,15 +338,56 @@ th {
 }
 
 /* Form styles */
+#contact-form {
+    width: 350px;
+    margin: 0 auto;
+}
+form {
+    text-align: left;
+}
 label {
     display: block;
+    text-align: left;
 }
-
 input, textarea {
     border-radius: 15px;
     border-width: 1px;
     border-style: solid;
-    border-color: #f8f8f8;
-    padding: 10px;
+    border-color: #000000;
+    padding: 15px;
     margin: 5px;
+    width: 100%;
+    max-width: 350px;
+    min-width: 350px;
+    font-size: 14px;
+    background-color: #f8f8f8;
+}
+textarea {
+    height: 120px;
+}
+#send {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Updates */
+.update-section {
+    text-align: left;
+}
+
+.update-text {
+    margin-top: -50px;
+    margin-left: 100px;
+}
+.update-heading {
+    border: 3px solid #000000;
+    border-radius: 10px;
+    display: inline;
+    padding: 10px;
+}
+.update-date {
+    text-align: right;
+
+    font-family: monospace;
 }
