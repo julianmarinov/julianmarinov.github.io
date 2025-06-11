@@ -23,7 +23,6 @@
 *::after {
     box-sizing: border-box;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -48,7 +47,6 @@ nav {
     justify-content: flex-end;
     gap: 20px;
 }
-
 nav li {
     display: inline-block;
     margin-right: 20px;
@@ -56,12 +54,10 @@ nav li {
     font-size: 16px;
     font-weight: 400;
 }
-
 nav li a {
     color: #000000;
     text-decoration: none;
 }
-
 nav li a:hover {
     color: #333;
     text-decoration: underline;
@@ -77,14 +73,11 @@ footer {
     width: 100%;
     text-align: center;
 }
-
 .social-icon {
     width: 20px;
     height: auto;
 }
-
 .hero {
-
     justify-content: center;
     align-items: center;
     margin-top: 70px;
@@ -92,7 +85,6 @@ footer {
     background-color: #ffffff;
     background-size: cover;
     background-position: center;
-
     text-align: center;
     color: #000000;
     position: relative;
@@ -105,7 +97,6 @@ main {
     position: relative;
     margin-bottom: 80px;
 }
-
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -117,43 +108,34 @@ body {
 }
 
 /* Text styles */
-
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
-
 h1 {
     font-size: 2.5rem;
 }
-
 h2 {
     font-size: 2rem;
 }
-
 h3 {
     font-size: 1.5rem;
 }
-
 h4 {
     font-size: 1.25rem;
 }
-
 h5 {
     font-size: 1rem;
 }
-
 h6 {
     font-size: 1rem;
 }
-
 p {
     margin-bottom: 1rem;
     line-height: 1.6;
     color: #333;
 }
-
 a {
     color: #000000;
     text-decoration: underline;
@@ -161,88 +143,69 @@ a {
 
 /* Shared styles for reusable layout */
 .text-left, .text-right, .text-mid, .certificate, .update-section {
-
     gap: 20px;
     padding: 50px;
     margin: 50px 100px 50px 100px;
     border-radius: 10px;
 }
-
 .text-left, .text-right {
     display: flex; /* Side-by-side layout */
 }
-
 .text-left, .text-right, .certificate, .update-section {
     background-color: #f8f8f8;
 }
-
 .text-left .section-text {
     order: 0; /* Keep text on the left */
 }
-
 .text-left .section-media {
     order: 1; /* Media stays on the right */
 }
-
 .text-right .section-text {
     order: 1; /* Move text to the right */
-
 }
-
 .text-right .section-media {
     order: 0; /* Move media to the left */
 }
-
 .section-text p {
     margin: 0 50px 30px;
     align-self: center;
 }
-
 .section-text, .section-media {
     flex: 1; /* Make both divs take equal width */
     align-self: center;
 }
-
 .section-media img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
-
 .download-icon {
     width: 25px;
     height: auto;
 }
-
 .certificate-title {
     text-align: left;
 }
-
 .certificate-content, .certificate-includes {
     text-align: left;
     margin-top: -15px;
 }
-
 .certificate-includes {
     margin-left: 30px;
 }
-
 .certificate-content {
     margin-bottom: 30px;
 
 }
-
 .codecademy-logo {
     width: 80px;
     height: auto;
 }
-
 .certificate {
     display: flex;
     justify-content: space-between;
     margin: 0 50px 20px 50px;
 }
-
 .certificate-download {
     display: flex;
     align-items: flex-end;
@@ -253,7 +216,6 @@ a {
 }
 
 /* Button styles */
-
 .btn-light, .btn-dark, .btn-download-certificate {
     display: inline-block;
     padding: 10px 20px;
@@ -266,13 +228,11 @@ a {
     font-weight: 300;
     border: solid 1px;
 }
-
 .btn-light {
     background-color: #ffffff;
     border-color: #000000;
     color: #000000;
 }
-
 .btn-light:hover, .btn-download-certificate:hover {
     background-color: #f7f7f7;
     color: #000000;
@@ -281,18 +241,15 @@ a {
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
 }
-
 .btn-light:active, .btn-download-certificate:active {
     background-color: #e2e2e2;
     color: #000000;
 }
-
 .btn-dark {
     background-color: #000000;
     border: #ffffff;
     color: #ffffff;
 }
-
 .btn-dark:hover {
     background-color: #0b0b0b;
     color: #ffffff;
@@ -301,12 +258,10 @@ a {
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
 }
-
 .btn-dark:active {
     background-color: #2d2d2d;
     color: #ffffff;
 }
-
 .btn-download-certificate {
     background-color: #ffffff;
     border-color: #000000;
@@ -321,7 +276,6 @@ code {
     border-radius: 3px;
     font-family: Consolas, "Courier New", monospace;
 }
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -375,7 +329,6 @@ textarea {
 .update-section {
     text-align: left;
 }
-
 .update-text {
     margin-top: -50px;
     margin-left: 100px;
@@ -388,6 +341,5 @@ textarea {
 }
 .update-date {
     text-align: right;
-
     font-family: monospace;
 }

@@ -1,0 +1,17 @@
+.single-sq {
+    display: inline-block;
+    background-color: #000000; /* #f8f8f8 */
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    opacity: 1;
+    transition: opacity 5s;
+    transition-timing-function: ease-out;
+}
+
+.single-sq:hover {
+    opacity: 0;
+    transition: opacity 0s;
+}
+
+/* filter: blur(2px); */
